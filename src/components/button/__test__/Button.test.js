@@ -4,13 +4,13 @@ import renderer from "react-test-renderer";
 
 beforeEach(cleanup);
 
-test("render success", () => {
+test("render component", () => {
   render(<Button label="SAVE"></Button>);
   const button = screen.getByTestId("button");
   expect(button).toHaveTextContent("SAVE");
 });
 
-test("render snapshot", () => {
+test("matches snapshot", () => {
   const tree = renderer.create(<Button label="SAVE" />).toJSON();
   expect(tree).toMatchSnapshot();
 });

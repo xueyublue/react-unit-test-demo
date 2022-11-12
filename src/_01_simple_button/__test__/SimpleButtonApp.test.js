@@ -1,7 +1,6 @@
-import { render, screen, cleanup, fireEvent } from "@testing-library/react";
+import { render, screen, cleanup, fireEvent, logRoles } from "@testing-library/react";
 import Button from "../SimpleButtonApp";
 import renderer from "react-test-renderer";
-import { logRoles } from "@testing-library/dom";
 import SimpleButtonApp from "../SimpleButtonApp";
 import { replaceCamelWithSpaces } from "..//SimpleButtonApp";
 

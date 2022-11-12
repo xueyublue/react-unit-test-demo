@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./SimpleButtonApp.module.css";
 
 export default function SimpleButtonApp() {
   const [color, setColor] = useState("MediumVioletRed");
@@ -6,17 +7,12 @@ export default function SimpleButtonApp() {
   const newColor = color === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed";
 
   return (
-    <div style={{ width: "100vw", height: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+    <div className={styles.container}>
       <button
         data-testid="colorButton"
+        className={styles.button}
         style={{
           backgroundColor: disabled ? "gray" : color,
-          color: "white",
-          width: "25%",
-          padding: "10px 10px",
-          transition: "0.25s ease-in-out",
-          border: "none",
-          textTransform: "uppercase",
         }}
         onClick={() => setColor(newColor)}
         disabled={disabled}

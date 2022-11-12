@@ -33,8 +33,14 @@ exports[`matches snapshot 1`] = `
   </button>
   <input
     defaultChecked={false}
+    id="disable-button-checkbox"
     onChange={[Function]}
     type="checkbox"
   />
+  <label
+    htmlFor="disable-button-checkbox"
+  >
+    Disable Button
+  </label>
 </div>
 `;

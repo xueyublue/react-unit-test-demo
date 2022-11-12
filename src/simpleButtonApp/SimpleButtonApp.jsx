@@ -10,7 +10,7 @@ export default function SimpleButtonApp() {
       <button
         data-testid="colorButton"
         style={{
-          backgroundColor: color,
+          backgroundColor: disabled ? "gray" : color,
           color: "white",
           width: "25%",
           padding: "10px 10px",
@@ -23,7 +23,13 @@ export default function SimpleButtonApp() {
       >
         Change to {newColor}
       </button>
-      <input type="checkbox" defaultChecked={disabled} onChange={(e) => setDisabled(e.target.checked)} />
+      <input
+        type="checkbox"
+        id="disable-button-checkbox"
+        defaultChecked={disabled}
+        onChange={(e) => setDisabled(e.target.checked)}
+      />
+      <label htmlFor="disable-button-checkbox">Disable Button</label>
     </div>
   );
 }

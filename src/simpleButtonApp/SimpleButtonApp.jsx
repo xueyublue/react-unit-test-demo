@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 export default function SimpleButtonApp() {
-  const [color, setColor] = useState("red");
+  const [color, setColor] = useState("MediumVioletRed");
   const [disabled, setDisabled] = useState(false);
-  const newColor = color === "red" ? "blue" : "red";
+  const newColor = color === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed";
 
   return (
     <div style={{ width: "100vw", height: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -14,14 +14,14 @@ export default function SimpleButtonApp() {
           color: "white",
           width: "25%",
           padding: "10px 10px",
-          transition: "0.5s ease-in-out",
+          transition: "0.25s ease-in-out",
           border: "none",
           textTransform: "uppercase",
         }}
         onClick={() => setColor(newColor)}
         disabled={disabled}
       >
-        Change to {newColor}
+        Change to {replaceCamelWithSpaces(newColor)}
       </button>
       <input
         type="checkbox"
@@ -32,4 +32,8 @@ export default function SimpleButtonApp() {
       <label htmlFor="disable-button-checkbox">Disable Button</label>
     </div>
   );
+}
+
+export function replaceCamelWithSpaces(colorName) {
+  return colorName.replace(/\B([A-Z])\B/g, " $1");
 }

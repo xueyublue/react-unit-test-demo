@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `
+exports[`test frontend behaviors matches snapshot 1`] = `
 <div
   style={
     Object {
@@ -18,18 +18,18 @@ exports[`matches snapshot 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "backgroundColor": "red",
+        "backgroundColor": "MediumVioletRed",
         "border": "none",
         "color": "white",
         "padding": "10px 10px",
         "textTransform": "uppercase",
-        "transition": "0.5s ease-in-out",
+        "transition": "0.25s ease-in-out",
         "width": "25%",
       }
     }
   >
     Change to 
-    blue
+    Midnight Blue
   </button>
   <input
     defaultChecked={false}

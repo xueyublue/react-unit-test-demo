@@ -1,5 +1,5 @@
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
-import Button from "../Button";
+import Button from "../SimpleButtonApp";
 import renderer from "react-test-renderer";
 import { logRoles } from "@testing-library/dom";
 
@@ -31,4 +31,26 @@ test("button turns blue when clicked", () => {
 test("matches snapshot", () => {
   const tree = renderer.create(<Button />).toJSON();
   expect(tree).toMatchSnapshot();
+});
+
+test("initial conditions", () => {
+  render(<Button />);
+  const colorButton = screen.getByRole("button", /Change to blue/i);
+  // check that the button starts out enabled
+  expect(colorButton).toBeEnabled(colorButton);
+  // check taht the checkbox started out unchecked
+  const checkbox = screen.getByRole("checkbox");
+  expect(checkbox).not.toBeChecked(checkbox);
+});
+
+test("checkbox disables button on first click and enabls on second click", () => {
+  render(<Button />);
+  const checkbox = screen.getByRole("checkbox");
+  const button = screen.getByRole("button");
+
+  fireEvent.click(checkbox);
+  expect(button).toBeDisabled();
+
+  fireEvent.click(checkbox);
+  expect(button).toBeEnabled();
 });

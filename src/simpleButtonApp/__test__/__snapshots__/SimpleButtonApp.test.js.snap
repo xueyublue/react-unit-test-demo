@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "height": "100vh",
+      "justifyContent": "center",
+      "width": "100vw",
+    }
+  }
+>
+  <button
+    data-testid="colorButton"
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "red",
+        "border": "none",
+        "color": "white",
+        "padding": "10px 10px",
+        "textTransform": "uppercase",
+        "transition": "0.5s ease-in-out",
+        "width": "25%",
+      }
+    }
+  >
+    Change to 
+    blue
+  </button>
+  <input
+    defaultChecked={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+</div>
+`;

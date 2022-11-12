@@ -2,29 +2,16 @@
 
 exports[`test frontend behaviors matches snapshot 1`] = `
 <div
-  style={
-    Object {
-      "alignItems": "center",
-      "display": "flex",
-      "height": "100vh",
-      "justifyContent": "center",
-      "width": "100vw",
-    }
-  }
+  className="container"
 >
   <button
+    className="button"
     data-testid="colorButton"
     disabled={false}
     onClick={[Function]}
     style={
       Object {
         "backgroundColor": "MediumVioletRed",
-        "border": "none",
-        "color": "white",
-        "padding": "10px 10px",
-        "textTransform": "uppercase",
-        "transition": "0.25s ease-in-out",
-        "width": "25%",
       }
     }
   >

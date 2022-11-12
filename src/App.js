@@ -1,5 +1,5 @@
 import "./App.css";
-import SimpleButtonApp from "./simpleButtonApp/SimpleButtonApp";
+import SimpleButtonApp from "./_01_simple_button/SimpleButtonApp";
 
 function App() {
   return (

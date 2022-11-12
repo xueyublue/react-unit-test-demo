@@ -2,8 +2,15 @@
 
 exports[`matches snapshot 1`] = `
 <button
-  data-testid="button"
+  data-testid="colorButton"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
 >
-  SAVE
+  Change to 
+  blue
 </button>
 `;

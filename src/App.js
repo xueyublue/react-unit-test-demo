@@ -1,13 +1,15 @@
+import { Container } from "react-bootstrap";
 import "./App.css";
-import SimpleButtonApp from "./_01_simple_button/SimpleButtonApp";
+import { OrderDetailsProvider } from "./_02_sundaes/context/OrderDetails";
 import OrderEntry from "./_02_sundaes/OrderEntry";
 
 function App() {
   return (
-    <div>
-      {/* <SimpleButtonApp /> */}
-      <OrderEntry />
-    </div>
+    <Container>
+      <OrderDetailsProvider>
+        <OrderEntry />
+      </OrderDetailsProvider>
+    </Container>
   );
 }
 

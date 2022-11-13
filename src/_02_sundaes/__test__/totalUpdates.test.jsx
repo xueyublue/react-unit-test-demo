@@ -4,7 +4,7 @@ import { OrderDetailsProvider } from "../context/OrderDetails";
 import Options from "../Options";
 
 describe("test", () => {
-  test("update scoop ssubtotal when scoops change", async () => {
+  test("update scoop subtotal when scoops change", async () => {
     const user = userEvent.setup();
     render(<Options optionType="scoops" />, { wrapper: OrderDetailsProvider });
 

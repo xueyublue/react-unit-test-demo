@@ -1,5 +1,5 @@
 import { render, screen, cleanup } from "@testing-library/react";
-import SummaryForm from "../SummaryForm";
+import SummaryForm from "../pages/SummaryForm";
 import userEvent from "@testing-library/user-event";
 
 describe("basic test", () => {

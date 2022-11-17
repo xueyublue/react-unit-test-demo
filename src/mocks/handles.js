@@ -19,4 +19,14 @@ export const handlers = [
       ])
     );
   }),
+
+  rest.post("http://localhost:3030/neworder", (req, res, ctx) => {
+    return res(
+      ctx.json([
+        { name: "Cherries", imagePath: "/images/cherries.png" },
+        { name: "M&Ms", imagePath: "/images/m-and-ms.png" },
+        { name: "Hot Fudge", imagePath: "/images/hot-fudge.png" },
+      ])
+    );
+  }),
 ];

@@ -13,5 +13,13 @@ describe("order phases test", () => {
     // check summary information based on order
 
     // accept terms and conditions and click button to confirm order
+
+    // confirm order number and confirmation page
+
+    // click new order button on confirmation page
+
+    // check that scoops and toppings subtotals have been reset
+
+    // to we need to await anything to aviod test errors
   });
 });

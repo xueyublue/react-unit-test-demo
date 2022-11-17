@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { OrderDetailsProvider } from "../context/OrderDetails";
 import Options from "../Options";
-import OrderEntry from "./../OrderEntry";
+import OrderEntry from "./../pages/OrderEntry";
 
 describe("test", () => {
   test("update scoop subtotal when scoops change", async () => {

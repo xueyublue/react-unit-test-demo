@@ -1,7 +1,7 @@
 import React from "react";
-import Options from "./Options";
-import { formatCurrency } from "./utils/index";
-import { useOrderDetails } from "./context/OrderDetails";
+import Options from "../Options";
+import { formatCurrency } from "../utils/index";
+import { useOrderDetails } from "../context/OrderDetails";
 
 export default function OrderEntry() {
   const { totals } = useOrderDetails();

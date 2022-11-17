@@ -24,4 +24,14 @@ describe("test", () => {
     await user.type(chocolateInput, "2");
     expect(scoopsSubTotal).toHaveTextContent("6.00");
   });
+
+  test("update toppings subtotal when toppingc change", async () => {
+    const user = userEvent.setup();
+    const toppingsTotal = screen.getByText("toppings total: $", { exact: false });
+    expect(toppingsTotal).toHaveTextContent("0.00");
+
+    const cherriesCheckbox = await screen.findByRole("checkbox", { name: /cherries/i });
+    await user.click(cherriesCheckbox);
+    expect(toppingsTotal).toHaveTextContent("1.50");
+  });
 });

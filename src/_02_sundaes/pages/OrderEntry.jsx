@@ -1,5 +1,5 @@
 import React from "react";
-import Options from "../Options";
+import Options from "../components/Options";
 import { formatCurrency } from "../utils/index";
 import { useOrderDetails } from "../context/OrderDetails";
 

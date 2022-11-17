@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { OrderDetailsProvider } from "../context/OrderDetails";
-import Options from "../Options";
+import Options from "../components/Options";
 import OrderEntry from "./../pages/OrderEntry";
 
 describe("test", () => {

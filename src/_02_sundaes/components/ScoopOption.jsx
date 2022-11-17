@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
-import { useOrderDetails } from "./context/OrderDetails";
+import { useOrderDetails } from "../context/OrderDetails";
 
 export default function ScoopOption({ name, imagePath }) {
   const [value, setValue] = useState(0);

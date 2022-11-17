@@ -1,5 +1,5 @@
 import { render, screen, cleanup } from "../test-utils/testing-library-utils";
-import Options from "../Options";
+import Options from "../components/Options";
 
 describe("basic tests", () => {
   afterEach(cleanup);

@@ -6,13 +6,21 @@ import { Button } from "react-bootstrap";
 
 export default function OrderEntry({ setOrderPhase }) {
   const { totals } = useOrderDetails();
+  const handleClick = () => {
+    console.log(totals);
+    if (totals.scoops === 0) {
+      alert("Please select at least one Scoops!");
+      return;
+    }
+    setOrderPhase("review");
+  };
 
   return (
     <div>
       <Options optionType="scoops" />
       <Options optionType="toppings" />
       <h2>Grand total: {formatCurrency(totals.scoops + totals.toppings)}</h2>
-      <Button onClick={() => setOrderPhase("review")}>Order Sundae!</Button>
+      <Button onClick={handleClick}>Order Sundae!</Button>
     </div>
   );
 }

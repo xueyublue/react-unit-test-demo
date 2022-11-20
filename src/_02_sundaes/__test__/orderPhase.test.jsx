@@ -9,6 +9,8 @@ describe("order phases test", () => {
     // No need to wrap in provide, alreadyw wrapped
     render(<App />);
 
+    //-----------------------------------------------------------------------
+    // Order Entry page
     // add ice cream scoops and toppings
     const vanillaInput = await screen.findByRole("spinbutton", { name: /vanilla/i });
     await user.clear(vanillaInput);
@@ -25,6 +27,8 @@ describe("order phases test", () => {
     const orderSummaryButton = screen.getByRole("button", { name: /order sundae/i });
     await user.click(orderSummaryButton);
 
+    //-----------------------------------------------------------------------
+    // Order Summary page
     // check summary information based on order
     const summaryHeading = screen.getByRole("heading", { name: /order summary/i });
     expect(summaryHeading).toBeInTheDocument();
@@ -47,6 +51,8 @@ describe("order phases test", () => {
     const confirmOrderButton = screen.getByRole("button", { name: /confirm order/i });
     await user.click(confirmOrderButton);
 
+    //-----------------------------------------------------------------------
+    // Order Confirmation page
     // confirm order number and confirmation page
     const thankYouHeader = await screen.findByRole("heading", { name: /thank you/i });
     expect(thankYouHeader).toBeInTheDocument();
@@ -54,10 +60,12 @@ describe("order phases test", () => {
     const orderNumber = await screen.findByText(/order number/i);
     expect(orderNumber).toBeInTheDocument();
 
-    // click new order button on confirmation page
+    // click "create new order" button on confirmation page
     const newOrderButton = screen.getByRole("button", { name: /new order/i });
     await user.click(newOrderButton);
 
+    //-----------------------------------------------------------------------
+    // Order Entry page
     // check that scoops and toppings subtotals have been reset
     const scoopsTotal = await screen.findByText("Scoops total: $0.00");
     expect(scoopsTotal).toBeInTheDocument();

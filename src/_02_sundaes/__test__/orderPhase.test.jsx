@@ -29,21 +29,22 @@ describe("order phases test", () => {
     const summaryHeading = screen.getByRole("heading", { name: /order summary/i });
     expect(summaryHeading).toBeInTheDocument();
 
-    const scoopsHeading = screen.getByRole("heading", { name: /scoops: $6.00/i });
+    const scoopsHeading = screen.getByRole("heading", { name: "Scoops: $6.00" });
     expect(scoopsHeading).toBeInTheDocument();
 
-    const toppingsHeading = screen.getByRole("heading", { name: /toppings: $1.50/i });
+    const toppingsHeading = screen.getByRole("heading", { name: "Toppings: $1.50" });
     expect(toppingsHeading).toBeInTheDocument();
 
     expect(screen.getByText("1 Vanilla")).toBeInTheDocument();
     expect(screen.getByText("2 Chocolate")).toBeInTheDocument();
-    expect(screen.getByText("Cherries")).toBeInTheDocument();
+    expect(screen.getByText("1 Cherries")).toBeInTheDocument();
 
     // accept terms and conditions and click button to confirm order
     const tcCheckbox = screen.getByRole("checkbox", { name: /terms and conditions/i });
+    expect(tcCheckbox).toBeInTheDocument();
     await user.click(tcCheckbox);
 
-    const confirmOrderButton = screen.getByRole("button", { name: /confirm oder/i });
+    const confirmOrderButton = screen.getByRole("button", { name: /confirm order/i });
     await user.click(confirmOrderButton);
 
     // confirm order number and confirmation page
@@ -58,10 +59,10 @@ describe("order phases test", () => {
     await user.click(newOrderButton);
 
     // check that scoops and toppings subtotals have been reset
-    const scoopsTotal = await screen.findByText(/scoops total: $0.00/i);
+    const scoopsTotal = await screen.findByText("Scoops total: $0.00");
     expect(scoopsTotal).toBeInTheDocument();
 
-    const toppingsTotal = screen.getByText(/toppings total: $0.00/i);
+    const toppingsTotal = screen.getByText("Toppings total: $0.00");
     expect(toppingsTotal).toBeInTheDocument();
 
     // to we need to await anything to aviod test errors

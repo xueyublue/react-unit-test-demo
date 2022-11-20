@@ -20,7 +20,9 @@ export default function OrderEntry({ setOrderPhase }) {
       <Options optionType="scoops" />
       <Options optionType="toppings" />
       <h2>Grand total: {formatCurrency(totals.scoops + totals.toppings)}</h2>
-      <Button onClick={handleClick}>Order Sundae!</Button>
+      <Button size="lg" onClick={handleClick}>
+        Order Sundae!
+      </Button>
     </div>
   );
 }

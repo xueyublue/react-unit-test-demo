@@ -27,7 +27,9 @@ export default function OrderConfirmation({ setOrderPhase }) {
         <p style={{ color: "lightgray" }}>
           <small>as per our terms and conditions, nothing will happen now</small>
         </p>
-        <Button onClick={handleClick}>Create new order</Button>
+        <Button size="lg" onClick={handleClick}>
+          Create new order
+        </Button>
       </div>
     );
   }

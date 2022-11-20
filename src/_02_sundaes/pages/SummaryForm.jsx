@@ -31,7 +31,7 @@ export default function SummaryForm({ setOrderPhase }) {
           label={checkboxLabel}
         />
       </Form.Group>
-      <Button variant="primary" type="submit" disabled={!tcChecked}>
+      <Button size="lg" type="submit" disabled={!tcChecked}>
         Confirm Order
       </Button>
     </Form>
